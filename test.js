@@ -8,7 +8,7 @@ var connection = mysql.createConnection({
 
 connection.connect();
 
-// 如果不存在user表那就创建一个wqs表，如果存在，那就不创建
+// 如果不存在wqs数据库那就创建一个wqs数据库，如果存在，那就不创建
 // 在mysql中不要使用‘utf8’,要使用‘utf8mb4’
 connection.query('CREATE DATABASE IF NOT EXISTS wqs DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_unicode_520_ci;', function (error, results, fields) {
     if (error) throw error;
